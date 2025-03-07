@@ -353,8 +353,8 @@ fit_ridge_round <- glmnet(k_tr_std_round, s_tr_round, alpha = 0)
 plot_glmnet(fit_ridge_round)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-10-1.png)<!-- --> In
-this chunk a Ridge Regression model is fitted on the standardized
+![](<figures/unnamed-chunk-10-1.png>)
+In this chunk a Ridge Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
 
@@ -407,8 +407,8 @@ fit_lasso_round <- glmnet(k_tr_std_round, s_tr_round)
 plot_glmnet(fit_lasso_round)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-12-1.png)<!-- --> In
-this chunk a Lasso Regression model is fitted on the standardized
+![](<figures/unnamed-chunk-12-1.png>) 
+In this chunk a Lasso Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
 **Features Selected : Family history, Age, Transport, Alcohol
@@ -517,8 +517,8 @@ fit_ridge.sub <- glmnet(e_tr_std_sub, f_tr_sub, alpha = 0)
 plot_glmnet(fit_ridge.sub)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-15-1.png)<!-- --> In
-this chunk a Ridge Regression model is fitted on the standardized
+![](<figures/unnamed-chunk-15-1.png>)
+In this chunk a Ridge Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
 
@@ -588,8 +588,8 @@ fit_lasso.sub <- glmnet(e_tr_std_sub, f_tr_sub)
 plot_glmnet(fit_lasso.sub)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-17-1.png)<!-- --> In
-this chunk a Lasso Regression model is fitted on the standardized
+![](<figures/unnamed-chunk-17-1.png>)
+In this chunk a Lasso Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
 **Features Selected : Age, Family history , Tech_use , Alcohol frequency
@@ -697,8 +697,8 @@ fit_ridge.rem <- glmnet(x_tr_std_rem, y_tr_rem, alpha = 0)
 plot_glmnet(fit_ridge.rem)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-20-1.png)<!-- --> In
-this chunk a Ridge Regression model is fitted on the standardized
+![](<figures/unnamed-chunk-20-1.png>)
+In this chunk a Ridge Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
 
@@ -768,8 +768,8 @@ fit_lasso.rem <- glmnet(x_tr_std_rem, y_tr_rem)
 plot_glmnet(fit_lasso.rem)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-22-1.png)<!-- --> In
-this chunk a Lasso Regression model is fitted on the standardized
+![](<figures/unnamed-chunk-22-1.png>)
+In this chunk a Lasso Regression model is fitted on the standardized
 training data and plots the solution path, which shows the coefficients
 for different values of the regularization parameter (lambda).
 **Features Selected : Gender , Age, Height , Family history , Water
@@ -909,7 +909,7 @@ ggplot(cv.ob_df, mapping = aes(x = size, y = deviance)) +
   geom_vline(xintercept = best_size, col = "firebrick1")
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](<figures/unnamed-chunk-25-1.png>)
 This code chunk builds a decision tree model on the rounded full dataset
 using the selected features. It performs cross-validation on the
 decision tree model to determine the optimal size (number of terminal
@@ -926,7 +926,7 @@ plot(ob.tree.final)
 text(ob.tree.final, cex=0.7 ,adj=1)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](<figures/unnamed-chunk-26-1.png>)
 
 ``` r
 # Compute training and test errors for Full Data
@@ -1039,7 +1039,7 @@ ggplot(cv.ob_subdf, mapping = aes(x = size, y = deviance)) +
   geom_vline(xintercept = best_size_sub, col = "darkturquoise")
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](<figures/unnamed-chunk-28-1.png>)
 This code chunk builds a decision tree model on the rounded subset
 dataset using the selected features. It performs cross-validation on the
 decision tree model to determine the optimal size (number of terminal
@@ -1056,7 +1056,7 @@ plot(ob.subtree.final)
 text(ob.subtree.final, cex=.7 ,adj=1)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](<figures/unnamed-chunk-29-1.png>)
 
 ``` r
 # Compute training and test errors for Rounded Subset Data
@@ -1170,7 +1170,7 @@ ggplot(cv.ob.rem_df, mapping = aes(x = size, y = deviance)) +
   geom_vline(xintercept = best_size_rem, col = "forestgreen")
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+![](<figures/unnamed-chunk-31-1.png>)
 This code chunk builds a decision tree model on the rounded subset
 dataset using the selected features. It performs cross-validation on the
 decision tree model to determine the optimal size (number of terminal
@@ -1187,7 +1187,7 @@ plot(ob.remtree.final)
 text(ob.remtree.final, cex=.7 ,adj=1)
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](<figures/unnamed-chunk-32-1.png>)
 
 ``` r
 # Compute training and test errors for Removed Data
@@ -1361,8 +1361,8 @@ ggroc(c(rocobjs_logit, rocobjs_tree), alpha = 0.5) +
   labs(title = "ROC Curves for Logistic Regression and Decision Tree Models")
 ```
 
-![](ML_FinalProject_files/figure-gfm/unnamed-chunk-35-1.png)<!-- --> For
-Model Evaluation , fitting a logistic regression and decision tree
+![](<figures/unnamed-chunk-35-1.png>) 
+For Model Evaluation , fitting a logistic regression and decision tree
 models for all three datasets (rounded full data, rounded subset, and
 removed data) using the selected features. It then computes the receiver
 operating characteristic (ROC) curves and the area under the curve (AUC)
